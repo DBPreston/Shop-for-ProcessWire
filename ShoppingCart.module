@@ -55,7 +55,7 @@ class ShoppingCart extends WireData implements Module, ConfigurableModule
 
 		if ($this->input->post->sc_checkout) {
 			$this->updateCart($this->input->post->items);
-			$checkout = $this->pages->get("template=sc-checkout, include=hidden");
+			$checkout = $this->pages->get("template=sc_checkout, include=hidden");
 			if ($checkout->url)
 				$this->session->redirect($checkout->url);
 			else
